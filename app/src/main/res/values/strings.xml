@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">eduFUN</string>
+    <string name="counting_game_ins">•The game will start a countdown and after vibrate for a specific amount of times\n \n
+•Count the vibrations and answer when the game asks\n\n</string>
+    <string name="counting_game_head">counting game</string>
+    <string name="main_button_colors">colors</string>
+    <string name="main_button_shapes">shapes</string>
+    <string name="main_button_counting">counting</string>
+    <string name="main_button_animals">animals</string>
+    <string name="main_information">i</string>
+    <string name="image_desc">Main screen logo</string>
 </resources>
