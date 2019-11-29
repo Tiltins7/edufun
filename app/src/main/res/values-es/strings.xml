@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">eduFUN</string>
+    <string name="counting_game_ins">•El juego comenzará una cuenta regresiva y luego vibrará por una cantidad específica de veces\n \n
+•Cuenta las vibraciones y responde cuando el juego pregunte\n\n</string>
+    <string name="counting_game_head">juego de contar</string>
+    <string name="main_button_colors">colores</string>
+    <string name="main_button_shapes">formas</string>
+    <string name="main_button_counting">contando</string>
+    <string name="main_button_animals">animales</string>
+    <string name="main_information">i</string>
+    <string name="image_desc">Main screen logo</string>
+    <string name="lang">Idioma</string>
+</resources>

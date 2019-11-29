@@ -9,4 +9,5 @@
     <string name="main_button_animals">animals</string>
     <string name="main_information">i</string>
     <string name="image_desc">Main screen logo</string>
+    <string name="lang">Language</string>
 </resources>
