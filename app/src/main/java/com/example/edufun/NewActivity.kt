@@ -3,7 +3,6 @@ package com.example.edufun
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_new.*
 
 class NewActivity : AppCompatActivity() {
@@ -17,5 +16,6 @@ class NewActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+
     }
 }

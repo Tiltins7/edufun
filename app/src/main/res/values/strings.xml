@@ -10,4 +10,19 @@
     <string name="main_information">i</string>
     <string name="image_desc">Main screen logo</string>
     <string name="lang">Language</string>
+    <string name="recognition_game_text">color recognition game</string>
+    <string name="START_colorGame">START</string>
+    <string name="START_colorGame_text1">Set your eduFUN booklet in front of you and open the color game page</string>
+    <string name="START_colorGame_text2">The game will ask for a color on screen</string>
+    <string name="START_colorGame_text3">Point the camera to the color and press "OK"</string>
+    <string name="START_colorGame_text4">When you are ready, press "START"</string>
+    <string name="animal_gameText">animal game</string>
+    <string name="animal_gameText1">Set your eduFUN booklet in front of you and open the animal game page</string>
+    <string name="animal_gameText2">The game will ask for an animal by its name</string>
+    <string name="animal_gameText3">Point the camera to the QR code next to the animal and press "OK"</string>
+    <string name="animal_gameText4">When you are ready press ""START""</string>
+    <string name="animal_gameText5">START</string>
+    <string name="info">An app with different educational games for kids, using different interactions with the devices</string>
+
+
 </resources>

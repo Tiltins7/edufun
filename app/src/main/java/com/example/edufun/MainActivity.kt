@@ -1,6 +1,8 @@
 @file:Suppress("DEPRECATION")
 
 package com.example.edufun
+
+
 import java.util.*
 import android.content.Context
 import android.content.res.Configuration
@@ -10,33 +12,47 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.IOException
+import android.hardware.Camera
+import android.util.Log
+import android.view.SurfaceHolder
+import android.view.SurfaceView
+import android.view.View
 
 class MainActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn.setOnClickListener {
-
-            //var camera = Intent(this, color::class.java "android.media.action.IMAGE_CAPTURE")
-           //startActivity(camera)
-
-        }
         button4.setOnClickListener {
             val intent = Intent(this, NewActivity::class.java)
             startActivity(intent)
+        }
 
+        btnAnimal.setOnClickListener {
+            val intent = Intent(this, Animal::class.java)
+            startActivity(intent)
+        }
+
+        btn_info.setOnClickListener{
+            val intent = Intent(this, Info::class.java)
+            startActivity(intent)
+        }
+
+        btnColor.setOnClickListener{
+            val intent = Intent(this, color::class.java)
+            startActivity(intent)
         }
 
         langbutton.setOnClickListener{
-
             showChangeLang()
-
         }
 
-
     }
+
+
 
     private fun showChangeLang() {
         val listItems = arrayOf("english","español")
@@ -71,5 +87,6 @@ class MainActivity : AppCompatActivity() {
         editor.putString("My_Lang", Lang)
         editor.apply()
     }
-}
+    }
+
 
