@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#74b9ff"
+    tools:context=".Info">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="329dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/edufun" />
+
+    <FrameLayout
+
+        android:id="@+id/frameLayout"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/framelay_rectforinfo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+
+            android:id="@+id/textView2"
+            android:layout_width="276dp"
+            android:layout_height="234dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="0dp"
+            android:fontFamily="@font/peace_sans"
+            android:gravity="center"
+            android:text="@string/info"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="330dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:fontFamily="@font/peace_sans"
+            android:gravity="center"
+            android:text="made by: Ralfs and Kristers"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/homeBtnInf"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+
+        android:layout_marginStart="250dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="545dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@mipmap/homeinfo_round"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.542" />
+
+    <Button
+        android:id="@+id/btnAudio"
+
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+
+        android:layout_marginTop="545dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
+        android:background="@mipmap/audio_round"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.542" />
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
