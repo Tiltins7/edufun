@@ -50,6 +50,7 @@ class animalGame : AppCompatActivity() {
 
         btnExit.setOnClickListener{
             val intent = Intent(this, Animal::class.java)
+
             startActivity(intent)
         }
 
@@ -72,10 +73,10 @@ class animalGame : AppCompatActivity() {
             View.INVISIBLE
 
         }
-        view1.visibility = if (randVal.text != et_value.text){
-            View.VISIBLE
-        } else{
+        view1.visibility = if (randVal.text == et_value.text){
             View.INVISIBLE
+        } else{
+            View.VISIBLE
         }
 
     }
@@ -99,6 +100,7 @@ class animalGame : AppCompatActivity() {
             // call scanner function
             initScan()
 
+
         }
     }
 
@@ -116,6 +118,10 @@ class animalGame : AppCompatActivity() {
                 Toast.makeText(this, "The data is empty.", Toast.LENGTH_LONG).show()
             } else {
                 et_value.setText(result.contents.toString())
+                if (result.contents != null)
+                {
+                    equalString(correctStr, incorrectStr)
+                }
             }
         } else {
             // the camera will be open till result is null
