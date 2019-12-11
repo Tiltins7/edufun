@@ -32,6 +32,9 @@
     <string name="animal_game_started_text5">CORRECT!</string>
     <string name="animal_game_started_text6">INCORRECT!</string>
     <string name="info">An app with different educational games for kids, using different interactions with the devices</string>
+    <string name="counting_game_get_ready">GET READY!</string>
+    <string name="countdown">%1$d</string>
+    <string name="counting_game_count">COUNT!</string>
 
 
 </resources>
