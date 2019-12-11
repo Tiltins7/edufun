@@ -17,5 +17,10 @@ class counting_info : AppCompatActivity() {
 
         }
 
+        countingStart.setOnClickListener{
+            val intent = Intent(this, counting_game_start::class.java)
+            startActivity(intent)
+        }
+
     }
 }
