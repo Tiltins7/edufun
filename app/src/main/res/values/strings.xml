@@ -25,12 +25,12 @@
     <string name="animal_gameText3">•Point the camera to the QR code next to the animal and press "OK"</string>
     <string name="animal_gameText4">When you are ready press ""START""</string>
     <string name="animal_gameText5">START</string>
-    <string name="animal_game_started_text1">Animal:</string>
+    <string name="animal_game_started_text1">animal:</string>
     <string name="animal_game_started_text2"> </string>
-    <string name="animal_game_started_text3">Scan</string>
-    <string name="animal_game_started_text4">Your answer:</string>
-    <string name="animal_game_started_text5">Correct!</string>
-    <string name="animal_game_started_text6">Inorrect!</string>
+    <string name="animal_game_started_text3">scan</string>
+    <string name="animal_game_started_text4">your answer:</string>
+    <string name="animal_game_started_text5">CORRECT!</string>
+    <string name="animal_game_started_text6">INCORRECT!</string>
     <string name="info">An app with different educational games for kids, using different interactions with the devices</string>
 
 

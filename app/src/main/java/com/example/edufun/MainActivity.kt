@@ -9,15 +9,8 @@ import android.content.res.Configuration
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
-import java.io.IOException
-import android.hardware.Camera
-import android.util.Log
-import android.view.SurfaceHolder
-import android.view.SurfaceView
-import android.view.View
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,17 +20,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         button4.setOnClickListener {
-            val intent = Intent(this, NewActivity::class.java)
+            val intent = Intent(this, counting_info::class.java)
             startActivity(intent)
         }
 
         btnAnimal.setOnClickListener {
-            val intent = Intent(this, Animal::class.java)
+            val intent = Intent(this, animal_info::class.java)
             startActivity(intent)
         }
 
         btn_info.setOnClickListener{
-            val intent = Intent(this, Info::class.java)
+            val intent = Intent(this, info::class.java)
             startActivity(intent)
         }
 

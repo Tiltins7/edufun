@@ -11,22 +11,13 @@ import android.os.StrictMode
 import android.speech.tts.TextToSpeech
 import android.view.WindowManager
 import android.widget.LinearLayout
-import android.widget.Toast
-import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_animal.*
 import kotlinx.android.synthetic.main.activity_animal.btnAudioAnimal
 import kotlinx.android.synthetic.main.activity_animal.homebtn
-import kotlinx.android.synthetic.main.activity_animal_game.*
-import kotlinx.android.synthetic.main.activity_color.*
 import java.util.*
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 
 
-
-
-class Animal : AppCompatActivity() {
+class animal_info : AppCompatActivity() {
 
     private var mCamera: Camera? = null
     private var mPreview: CameraPreview? = null
@@ -89,8 +80,8 @@ class Animal : AppCompatActivity() {
 
 
 
-            val intent = Intent(this, animalGame::class.java)
-            //Passing string value from this activity to animalGame, put string element from list and add to intent - name "MY_KEY",
+            val intent = Intent(this, animal_start_screen::class.java)
+            //Passing string value from this activity to animal_start_screen, put string element from list and add to intent - name "MY_KEY",
             intent.putExtra("MY_KEY", oneAnimal)
             startActivity(intent)
 
@@ -114,7 +105,7 @@ class Animal : AppCompatActivity() {
         mCamera = Camera.open()
         mCamera!!.setDisplayOrientation(90)
         cameraPreview = findViewById(R.id.aPreview) as LinearLayout
-        mPreview = CameraPreview(myContext as Animal, mCamera)
+        mPreview = CameraPreview(myContext as animal_info, mCamera)
         cameraPreview!!.addView(mPreview)
 
         mCamera!!.startPreview()

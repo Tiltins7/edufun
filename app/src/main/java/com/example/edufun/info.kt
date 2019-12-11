@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_info.*
 
 import java.util.*
 
-class Info : AppCompatActivity() {
+class info : AppCompatActivity() {
 
     //Text To Speech
     lateinit var mTTS:TextToSpeech

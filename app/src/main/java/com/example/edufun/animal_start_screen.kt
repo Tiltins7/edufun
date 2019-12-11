@@ -8,25 +8,15 @@ import android.hardware.Camera
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.StrictMode
-import android.speech.tts.TextToSpeech
 import android.view.WindowManager
 import android.widget.LinearLayout
 import android.widget.Toast
 import com.google.zxing.integration.android.IntentIntegrator
-import kotlinx.android.synthetic.main.activity_animal.*
 import kotlinx.android.synthetic.main.activity_animal_game.*
-import java.util.*
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.view.View
-import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_color.*
-import kotlin.random.Random
 
 
-
-class animalGame : AppCompatActivity() {
+class animal_start_screen : AppCompatActivity() {
 
     private var mCamera: Camera? = null
     private var mPreview: CameraPreview? = null
@@ -49,7 +39,7 @@ class animalGame : AppCompatActivity() {
         myContext = this
 
         btnExit.setOnClickListener{
-            val intent = Intent(this, Animal::class.java)
+            val intent = Intent(this, animal_info::class.java)
             startActivity(intent)
         }
 
@@ -86,7 +76,7 @@ class animalGame : AppCompatActivity() {
         mCamera = Camera.open()
         mCamera!!.setDisplayOrientation(90)
         cameraPreview = findViewById(R.id.dPreview) as LinearLayout
-        mPreview = CameraPreview(myContext as animalGame, mCamera)
+        mPreview = CameraPreview(myContext as animal_start_screen, mCamera)
         cameraPreview!!.addView(mPreview)
 
         mCamera!!.startPreview()
