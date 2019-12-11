@@ -16,11 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".animalGame"></activity>
+        <activity android:name=".animalGame" />
         <activity android:name=".Info" />
         <activity android:name=".Animal" />
         <activity android:name=".color" />
-        <activity android:name=".de" />
         <activity android:name=".NewActivity" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
