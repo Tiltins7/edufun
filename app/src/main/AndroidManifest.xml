@@ -4,7 +4,7 @@
     package="com.example.edufun">
 
     <uses-feature android:name="android.hardware.camera" />
-
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -17,11 +17,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".animalGame"></activity>
-        <activity android:name=".Info" />
-        <activity android:name=".Animal" />
+        <activity android:name=".animal_start_screen" />
+        <activity android:name=".info" />
+        <activity android:name=".animal_info" />
         <activity android:name=".color" />
-        <activity android:name=".NewActivity" />
+        <activity android:name=".counting_info" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"

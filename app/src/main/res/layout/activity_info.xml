@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#74b9ff"
-    tools:context=".Info">
+    tools:context=".info">
 
 
     <ImageView
@@ -19,7 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/edufun" />
+        app:srcCompat="@drawable/edufun"
+        android:contentDescription="@string/app_name"/>
 
     <FrameLayout
 
@@ -47,7 +48,7 @@
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="0dp"
-            android:fontFamily="@font/peace_sans"
+            app:fontFamily="@font/peace_sans"
             android:gravity="center"
             android:text="@string/info"
             android:textColor="#FFFFFF"
@@ -62,9 +63,9 @@
             android:layout_marginTop="330dp"
             android:layout_marginEnd="0dp"
             android:layout_marginRight="0dp"
-            android:fontFamily="@font/peace_sans"
+            app:fontFamily="@font/peace_sans"
             android:gravity="center"
-            android:text="made by: Ralfs and Kristers"
+            android:text="@string/info_authors"
             android:textColor="#FFFFFF"
             android:textSize="19sp" />
 
@@ -74,17 +75,13 @@
         android:id="@+id/homeBtnInf"
         android:layout_width="65dp"
         android:layout_height="65dp"
-
-        android:layout_marginStart="250dp"
         android:layout_marginLeft="250dp"
+        android:layout_marginStart="250dp"
         android:layout_marginTop="545dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         android:background="@mipmap/homeinfo_round"
         android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.542" />
@@ -105,6 +102,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.542" />
-    />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

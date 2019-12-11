@@ -5,28 +5,22 @@ package com.example.edufun
 import android.content.Context
 import android.content.Intent
 import android.hardware.Camera
+import android.opengl.Visibility
+import android.os.*
+import android.util.TypedValue
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.os.StrictMode
-import android.speech.tts.TextToSpeech
 import android.view.WindowManager
 import android.widget.LinearLayout
 import android.widget.Toast
 import com.google.zxing.integration.android.IntentIntegrator
-import kotlinx.android.synthetic.main.activity_animal.*
 import kotlinx.android.synthetic.main.activity_animal_game.*
-import java.util.*
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.view.View
-import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_color.*
-import kotlin.random.Random
 
 
 
-class animalGame : AppCompatActivity() {
+
+
+class animal_start_screen : AppCompatActivity() {
 
     private var mCamera: Camera? = null
     private var mPreview: CameraPreview? = null
@@ -38,8 +32,8 @@ class animalGame : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_animal_game)
 
-       val randV = intent.getStringExtra("MY_KEY")
-        randVal?.text = randV
+        changeCharSize()
+
 
 
         val builder = StrictMode.VmPolicy.Builder()
@@ -49,8 +43,7 @@ class animalGame : AppCompatActivity() {
         myContext = this
 
         btnExit.setOnClickListener{
-            val intent = Intent(this, Animal::class.java)
-
+            val intent = Intent(this, animal_info::class.java)
             startActivity(intent)
         }
 
@@ -59,6 +52,29 @@ class animalGame : AppCompatActivity() {
         initFunc()
             // TODO need to find the way to call equalString() after QR scann
         //equalString(correctStr, incorrectStr)
+
+    }
+
+
+    private fun changeCharSize(){
+
+
+
+        val randV = intent.getStringExtra("MY_KEY")
+        randVal?.text = randV
+
+        if (randVal.text == "ELEPHANT" )
+        {
+            randVal.setTextSize(TypedValue.COMPLEX_UNIT_SP,45F)
+        } else if (randVal.text == "MONKEY")
+        {
+            randVal.setTextSize(TypedValue.COMPLEX_UNIT_SP,50F)
+        }
+        else if (randVal.text == "PENGUIN")
+        {
+            randVal.setTextSize(TypedValue.COMPLEX_UNIT_SP,50F)
+        }
+
 
     }
 
@@ -77,8 +93,27 @@ class animalGame : AppCompatActivity() {
             View.INVISIBLE
         } else{
             View.VISIBLE
+
         }
 
+    }
+
+    fun inCorrectVib(){
+        if (randVal.text != et_value.text)
+        {
+            vibration()
+        }
+    }
+
+    fun vibration(){
+        val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        if (vibrator.hasVibrator()) { // Vibrator availability checking
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                vibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE)) // New vibrate method for API Level 26 or higher
+            } else {
+                vibrator.vibrate(500) // Vibrate method for below API Level 26
+            }
+        }
     }
 
 
@@ -87,7 +122,7 @@ class animalGame : AppCompatActivity() {
         mCamera = Camera.open()
         mCamera!!.setDisplayOrientation(90)
         cameraPreview = findViewById(R.id.dPreview) as LinearLayout
-        mPreview = CameraPreview(myContext as animalGame, mCamera)
+        mPreview = CameraPreview(myContext as animal_start_screen, mCamera)
         cameraPreview!!.addView(mPreview)
 
         mCamera!!.startPreview()
@@ -121,6 +156,7 @@ class animalGame : AppCompatActivity() {
                 if (result.contents != null)
                 {
                     equalString(correctStr, incorrectStr)
+                    inCorrectVib()
                 }
             }
         } else {
