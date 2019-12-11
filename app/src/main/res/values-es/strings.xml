@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">eduFUN</string>
-    <string name="counting_game_ins">•El juego comenzará una cuenta regresiva y luego vibrará por una cantidad específica de veces\n \n
-•Cuenta las vibraciones y responde cuando el juego pregunte\n\n</string>
+    <string name="counting_game_ins">•El juego comenzará una cuenta regresiva y luego vibrará por una cantidad específica de veces</string>
+    <string name="counting_game_ins2">•Cuenta las vibraciones y responde cuando el juego pregunte</string>
+    <string name="counting_game_ins3">Cuando esté listo, presione "INICIAR"</string>
+    <string name="counting_game_START">START</string>
     <string name="counting_game_head">juego de contar</string>
     <string name="main_button_colors">colores</string>
     <string name="main_button_shapes">formas</string>
@@ -23,5 +25,12 @@
     <string name="animal_gameText3">Apunte la cámara al código QR al lado del animal y presione "OK"</string>
     <string name="animal_gameText4">Cuando esté listo, presione "INICIAR"</string>
     <string name="animal_gameText5">INICIAR</string>
+    <string name="animal_game_started_text1">Animal:</string>
+    <string name="animal_game_started_text2"> </string>
+    <string name="animal_game_started_text3">Escanear</string>
+    <string name="animal_game_started_text4">Tu respuesta:</string>
+    <string name="animal_game_started_text5">Correcto!</string>
+    <string name="animal_game_started_text6">Inorrecto!</string>
+    <string name="info_authors">hecho por: Ralfs and Kristers</string>
     <string name="info">Una aplicación con diferentes juegos educativos para niños, que utiliza diferentes interacciones con dispositivos.</string>
 </resources>

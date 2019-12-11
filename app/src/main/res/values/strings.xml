@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">eduFUN</string>
-    <string name="counting_game_ins">•The game will start a countdown and after vibrate for a specific amount of times\n \n
-•Count the vibrations and answer when the game asks\n\n</string>
+    <string name="info_authors">made by: Ralfs and Kristers</string>
+    <string name="counting_game_ins">•The game will start a countdown and after vibrate for a specific amount of times</string>
+    <string name="counting_game_ins2">•Count the vibrations and answer when the game asks</string>
+    <string name="counting_game_ins3">When you are ready, press "START"</string>
+    <string name="counting_game_START">START</string>
     <string name="counting_game_head">counting game</string>
     <string name="main_button_colors">colors</string>
     <string name="main_button_shapes">shapes</string>
@@ -12,16 +15,22 @@
     <string name="lang">Language</string>
     <string name="recognition_game_text">color recognition game</string>
     <string name="START_colorGame">START</string>
-    <string name="START_colorGame_text1">Set your eduFUN booklet in front of you and open the color game page</string>
-    <string name="START_colorGame_text2">The game will ask for a color on screen</string>
-    <string name="START_colorGame_text3">Point the camera to the color and press "OK"</string>
+    <string name="START_colorGame_text1">•Set your eduFUN booklet in front of you and open the color game page</string>
+    <string name="START_colorGame_text2">•The game will ask for a color on screen</string>
+    <string name="START_colorGame_text3">•Point the camera to the color and press "OK"</string>
     <string name="START_colorGame_text4">When you are ready, press "START"</string>
     <string name="animal_gameText">animal game</string>
-    <string name="animal_gameText1">Set your eduFUN booklet in front of you and open the animal game page</string>
-    <string name="animal_gameText2">The game will ask for an animal by its name</string>
-    <string name="animal_gameText3">Point the camera to the QR code next to the animal and press "OK"</string>
+    <string name="animal_gameText1">•Set your eduFUN booklet in front of you and open the animal game page</string>
+    <string name="animal_gameText2">•The game will ask for an animal by its name</string>
+    <string name="animal_gameText3">•Point the camera to the QR code next to the animal and press "OK"</string>
     <string name="animal_gameText4">When you are ready press ""START""</string>
     <string name="animal_gameText5">START</string>
+    <string name="animal_game_started_text1">Animal:</string>
+    <string name="animal_game_started_text2"> </string>
+    <string name="animal_game_started_text3">Scan</string>
+    <string name="animal_game_started_text4">Your answer:</string>
+    <string name="animal_game_started_text5">Correct!</string>
+    <string name="animal_game_started_text6">Inorrect!</string>
     <string name="info">An app with different educational games for kids, using different interactions with the devices</string>
 
 
