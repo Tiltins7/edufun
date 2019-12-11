@@ -16,6 +16,15 @@ import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_animal.*
 import kotlinx.android.synthetic.main.activity_animal_game.*
 import java.util.*
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.view.View
+import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_color.*
+import kotlin.random.Random
+
+
 
 class animalGame : AppCompatActivity() {
 
@@ -24,9 +33,13 @@ class animalGame : AppCompatActivity() {
     private var myContext: Context? = null
     private var cameraPreview: LinearLayout? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_animal_game)
+
+       val randV = intent.getStringExtra("MY_KEY")
+        randVal?.text = randV
 
 
         val builder = StrictMode.VmPolicy.Builder()
@@ -43,7 +56,30 @@ class animalGame : AppCompatActivity() {
         initCamere()
 
         initFunc()
+            // TODO need to find the way to call equalString() after QR scann
+        //equalString(correctStr, incorrectStr)
+
     }
+
+
+            // function to compare the expected and given string values, playing with textView visibility.
+            // Need to find a way to call function after scan....
+    private fun equalString(view: View, view1: View){
+
+        view.visibility = if (randVal.text == et_value.text){
+            View.VISIBLE
+        } else{
+            View.INVISIBLE
+
+        }
+        view1.visibility = if (randVal.text != et_value.text){
+            View.VISIBLE
+        } else{
+            View.INVISIBLE
+        }
+
+    }
+
 
     private fun initCamere() {
 
@@ -62,6 +98,7 @@ class animalGame : AppCompatActivity() {
         btn_scan_me.setOnClickListener{
             // call scanner function
             initScan()
+
         }
     }
 
@@ -85,4 +122,6 @@ class animalGame : AppCompatActivity() {
             super.onActivityResult(requestCode, resultCode, data)
         }
     }
+
+
 }
