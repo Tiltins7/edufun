@@ -19,6 +19,11 @@ import kotlinx.android.synthetic.main.activity_animal.homebtn
 import kotlinx.android.synthetic.main.activity_animal_game.*
 import kotlinx.android.synthetic.main.activity_color.*
 import java.util.*
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+
+
 
 
 class Animal : AppCompatActivity() {
@@ -29,6 +34,8 @@ class Animal : AppCompatActivity() {
     private var cameraPreview: LinearLayout? = null
 
     lateinit var mTTS: TextToSpeech
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,11 +79,22 @@ class Animal : AppCompatActivity() {
         }
 
         animalStart.setOnClickListener {
+
+
+            // Creating list here,
+            val animalList= listOf<String>("CAT","Dog","Elephant")
+
+            // then randomly take one element from the list
+            val oneAnimal = animalList.random()
+
+
+
             val intent = Intent(this, animalGame::class.java)
+            //Passing string value from this activity to animalGame, put string element from list and add to intent - name "MY_KEY",
+            intent.putExtra("MY_KEY", oneAnimal)
             startActivity(intent)
 
-
-        }
+                 }
 
         val builder = StrictMode.VmPolicy.Builder()
         StrictMode.setVmPolicy(builder.build())
