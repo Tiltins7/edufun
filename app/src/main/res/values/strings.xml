@@ -34,7 +34,17 @@
     <string name="info">An app with different educational games for kids, using different interactions with the devices</string>
     <string name="counting_game_get_ready">GET READY!</string>
     <string name="countdown">%1$d</string>
+    <string name="button_1">%1$d</string>
+    <string name="button_2">%1$d</string>
+    <string name="button_3">%1$d</string>
     <string name="counting_game_count">COUNT!</string>
+    <string name="counting_game_what_is">What is the anwer?</string>
+    <string name="counting_finish_correct">%1$s</string>
+    <string name="counting_finish_incorrect">%1$s</string>
+    <string name="counting_finish_playagain">PLAY AGAIN</string>
+    <string name="counting_finish_exit">EXIT</string>
+
+
 
 
 </resources>
