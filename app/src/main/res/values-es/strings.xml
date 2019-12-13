@@ -35,7 +35,15 @@
     <string name="info">Una aplicación con diferentes juegos educativos para niños, que utiliza diferentes interacciones con dispositivos.</string>
     <string name="counting_game_get_ready">PREPARARSE!</string>
     <string name="countdown">%1$d</string>
+    <string name="button_1">2$d</string>
+    <string name="button_2">3$d</string>
     <string name="counting_game_count">¡CONTAR!</string>
     <string name="animal_game_reload">AGAIN</string>
     <string name="change_color">Cambiar el color</string>
+    <string name="button_3">%1$d</string>
+    <string name="counting_game_what_is">¿Cual es la respuesta?</string>
+    <string name="counting_finish_correct">%1$s</string>
+    <string name="counting_finish_incorrect">%1$s</string>
+    <string name="counting_finish_playagain">JUEGA DE NUEVO</string>
+    <string name="counting_finish_exit">SALIDA</string>
 </resources>
