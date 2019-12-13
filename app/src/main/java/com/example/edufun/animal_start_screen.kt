@@ -18,6 +18,7 @@ import android.view.View
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.media.MediaPlayer
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_color.*
 
@@ -28,6 +29,9 @@ class animal_start_screen : AppCompatActivity() {
     private var mPreview: CameraPreview? = null
     private var myContext: Context? = null
     private var cameraPreview: LinearLayout? = null
+
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,6 +65,8 @@ class animal_start_screen : AppCompatActivity() {
         //equalString(correctStr, incorrectStr)
    }
 
+
+
     private fun changeCharSize(){
         val randV = intent.getStringExtra("MY_KEY")
         randVal?.text = randV
@@ -78,7 +84,9 @@ class animal_start_screen : AppCompatActivity() {
             // Need to find a way to call function after scan....
     private fun equalString(view: View, view1: View){
 
+                val dink = MediaPlayer.create(this, R.raw.correct)
         view.visibility = if (randVal.text == et_value.text){
+            dink.start()
             View.VISIBLE
         } else{
             View.INVISIBLE
@@ -94,9 +102,13 @@ class animal_start_screen : AppCompatActivity() {
     }
 
     fun inCorrectVib(){
+        val ring = MediaPlayer.create(this, R.raw.beep)
+
         if (randVal.text != et_value.text)
         {
+            ring.start()
             vibration()
+
         }
     }
 
@@ -141,6 +153,7 @@ class animal_start_screen : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
 
+
         //check if result scan any QR code
         if(result != null){
             if ((result.contents == null))
@@ -152,6 +165,7 @@ class animal_start_screen : AppCompatActivity() {
                 {
                     equalString(correctStr, incorrectStr)
                     inCorrectVib()
+
 
                 }
             }

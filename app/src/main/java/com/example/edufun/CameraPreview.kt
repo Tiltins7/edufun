@@ -48,7 +48,7 @@ class CameraPreview(context: Context, private var mCamera: Camera?) : SurfaceVie
 
         // set preview size and make any resize, rotate or
         // reformatting changes here
-        // start preview with new settings
+        // start preview with new activity_settings
         setCamera(camera)
         try {
             mCamera!!.setPreviewDisplay(mHolder)
