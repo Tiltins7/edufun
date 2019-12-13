@@ -35,6 +35,7 @@
     <string name="counting_game_get_ready">GET READY!</string>
     <string name="countdown">%1$d</string>
     <string name="counting_game_count">COUNT!</string>
-
+    <string name="animal_game_reload">AGAIN</string>
+    <string name="change_color">Change color</string>
 
 </resources>

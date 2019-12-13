@@ -4,8 +4,8 @@ package com.example.edufun
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.hardware.Camera
-import android.opengl.Visibility
 import android.os.*
 import android.util.TypedValue
 import androidx.appcompat.app.AppCompatActivity
@@ -15,9 +15,11 @@ import android.widget.Toast
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_animal_game.*
 import android.view.View
-
-
-
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.widget.Button
+import kotlinx.android.synthetic.main.activity_color.*
 
 
 class animal_start_screen : AppCompatActivity() {
@@ -36,6 +38,7 @@ class animal_start_screen : AppCompatActivity() {
 
 
 
+
         val builder = StrictMode.VmPolicy.Builder()
         StrictMode.setVmPolicy(builder.build())
 
@@ -44,38 +47,30 @@ class animal_start_screen : AppCompatActivity() {
 
         btnExit.setOnClickListener{
             val intent = Intent(this, animal_info::class.java)
+            button.setVisibility(View.GONE);
             startActivity(intent)
+
         }
+
+
 
         initCamere()
 
         initFunc()
             // TODO need to find the way to call equalString() after QR scann
         //equalString(correctStr, incorrectStr)
-
-    }
-
+   }
 
     private fun changeCharSize(){
-
-
-
         val randV = intent.getStringExtra("MY_KEY")
         randVal?.text = randV
 
-        if (randVal.text == "ELEPHANT" )
-        {
-            randVal.setTextSize(TypedValue.COMPLEX_UNIT_SP,45F)
-        } else if (randVal.text == "MONKEY")
-        {
-            randVal.setTextSize(TypedValue.COMPLEX_UNIT_SP,50F)
-        }
-        else if (randVal.text == "PENGUIN")
-        {
-            randVal.setTextSize(TypedValue.COMPLEX_UNIT_SP,50F)
-        }
 
-
+        when {
+            randVal.text == "ELEPHANT" -> randVal.setTextSize(TypedValue.COMPLEX_UNIT_SP,45F)
+            randVal.text == "MONKEY" -> randVal.setTextSize(TypedValue.COMPLEX_UNIT_SP,50F)
+            randVal.text == "PENGUIN" -> randVal.setTextSize(TypedValue.COMPLEX_UNIT_SP,50F)
+        }
     }
 
 
@@ -134,7 +129,7 @@ class animal_start_screen : AppCompatActivity() {
         btn_scan_me.setOnClickListener{
             // call scanner function
             initScan()
-
+            btn_reload.visibility = View.VISIBLE
 
         }
     }
@@ -157,6 +152,7 @@ class animal_start_screen : AppCompatActivity() {
                 {
                     equalString(correctStr, incorrectStr)
                     inCorrectVib()
+
                 }
             }
         } else {

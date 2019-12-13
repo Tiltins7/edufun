@@ -7,6 +7,7 @@ import java.util.*
 import android.content.Context
 import android.content.res.Configuration
 import android.content.Intent
+import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +15,11 @@ import android.os.VibrationEffect
 import android.os.Vibrator
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -47,8 +53,35 @@ class MainActivity : AppCompatActivity() {
             showChangeLang()
         }
 
+        btnColChange.setOnClickListener{
+            changeAppColor()
+        }
+
     }
 
+    private fun changeAppColor() {
+        val listItems = arrayOf("Light Blue/Dark Blue", "Original")
+        val mBuilder = AlertDialog.Builder(this@MainActivity)
+        mBuilder.setTitle("Choose Color")
+        mBuilder.setSingleChoiceItems(listItems,-1){dialog, number ->
+            if (number == 0){
+                mainScreen.setBackgroundColor(Color.parseColor("#B3D1EF"))
+                btnColor.setBackgroundColor(Color.parseColor("#2B3196"))
+                btnAnimal.setBackgroundColor(Color.parseColor("#2B3196"))
+                button4.setBackgroundColor(Color.parseColor("#2B3196"))
+                button2.setBackgroundColor(Color.parseColor("#2B3196"))
+                langbutton.setBackgroundColor(Color.parseColor("#2B3196"))
+                btnColChange.setBackgroundColor(Color.parseColor("#2B3196"))
+                btn_info.setBackgroundColor(Color.parseColor("#2B3196"))
+            }
+            if (number == 1){
+                recreate()
+            }
+            dialog.dismiss()
+        }
+        val mDialog = mBuilder.create()
+        mDialog.show()
+    }
 
 
     private fun showChangeLang() {

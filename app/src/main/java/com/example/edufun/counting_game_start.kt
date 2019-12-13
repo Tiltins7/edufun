@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.edufun
 
 import android.content.Intent
@@ -10,8 +12,7 @@ import android.os.Vibrator
 import android.os.VibrationEffect
 import android.os.Build
 import android.content.Context
-import android.content.Context.VIBRATOR_SERVICE
-import androidx.core.content.ContextCompat.getSystemService
+
 
 
 
@@ -35,11 +36,13 @@ class counting_game_start: AppCompatActivity() {
                 var iter = 0
                 showHide(textView15)
                 showHide(textView16)
-                val answer = (0 until 11).random()
-                while(iter < answer) {
+                val answer = (3 until 11).random()
+                /*while(iter < answer) {
                     vibratePhone()
                     iter = iter + 1
-                }
+                }*/
+                vibratePhone(answer)
+
 
             }
         }.start()
@@ -60,14 +63,19 @@ class counting_game_start: AppCompatActivity() {
         }
     }
 
-    fun vibratePhone() {
-        val v = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+    fun vibratePhone(n: Int) {
+        var iter = 0
+        while(iter < n) {
+            val v = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 // Vibrate for 500 milliseconds
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            v.vibrate(VibrationEffect.createOneShot(1000, VibrationEffect.DEFAULT_AMPLITUDE))
-        } else {
-            //deprecated in API 26
-            v.vibrate(1000)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                v.vibrate(VibrationEffect.createOneShot(1000, VibrationEffect.DEFAULT_AMPLITUDE))
+            } else {
+                //deprecated in API 26
+                v.vibrate(1000)
+            }
+            iter += 1
         }
-    }
+        }
+
 }

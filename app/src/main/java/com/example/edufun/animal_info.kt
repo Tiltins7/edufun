@@ -4,17 +4,23 @@ package com.example.edufun
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.hardware.Camera
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.StrictMode
+import android.provider.CalendarContract
 import android.speech.tts.TextToSpeech
+import android.text.style.BackgroundColorSpan
 import android.view.WindowManager
 import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.activity_animal.*
 import kotlinx.android.synthetic.main.activity_animal.btnAudioAnimal
 import kotlinx.android.synthetic.main.activity_animal.homebtn
 import java.util.*
+import android.view.View
+import kotlinx.android.synthetic.main.activity_animal_game.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class animal_info : AppCompatActivity() {
@@ -50,15 +56,9 @@ class animal_info : AppCompatActivity() {
 
 
             mTTS.speak(toSpeak, TextToSpeech.QUEUE_ADD, null)
-
-
             mTTS.speak(toSpeak1, TextToSpeech.QUEUE_ADD, null)
-
-
             mTTS.speak(toSpeak2, TextToSpeech.QUEUE_ADD, null)
-
             mTTS.speak(toSpeak3, TextToSpeech.QUEUE_ADD, null)
-
             mTTS.speak(toSpeak4, TextToSpeech.QUEUE_ADD, null)
 
         }
@@ -68,6 +68,7 @@ class animal_info : AppCompatActivity() {
             startActivity(intent)
 
         }
+
 
         animalStart.setOnClickListener {
 
@@ -83,7 +84,12 @@ class animal_info : AppCompatActivity() {
             val intent = Intent(this, animal_start_screen::class.java)
             //Passing string value from this activity to animal_start_screen, put string element from list and add to intent - name "MY_KEY",
             intent.putExtra("MY_KEY", oneAnimal)
+
+
             startActivity(intent)
+
+
+
 
                  }
 
