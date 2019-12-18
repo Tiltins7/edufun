@@ -63,7 +63,13 @@ class animal_info : AppCompatActivity() {
 
         }
 
+
+
+
         homebtn.setOnClickListener {
+            if (mTTS.isSpeaking){
+                mTTS.stop()
+            }
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
 
@@ -72,6 +78,9 @@ class animal_info : AppCompatActivity() {
 
         animalStart.setOnClickListener {
 
+            if (mTTS.isSpeaking){
+                mTTS.stop()
+            }
 
             // Creating list here,
             val animalList= listOf<String>("CAT","DOG","BIRD","ELEPHANT","MONKEY","PIG","PENGUIN","RABBIT")
