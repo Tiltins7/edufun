@@ -24,6 +24,7 @@
         <activity android:name=".animal_info" />
         <activity android:name=".color" />
         <activity android:name=".counting_info" />
+        <activity android:name=".color_second_screen" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"

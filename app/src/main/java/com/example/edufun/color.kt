@@ -68,18 +68,35 @@ class color : AppCompatActivity() {
 
                 }
 
-                val builder = StrictMode.VmPolicy.Builder()
+                button_color_start.setOnClickListener{
+
+                    val colorList= listOf<String>("RED", "BLUE", "GREEN","BLACK")
+                    val onecolor = colorList.random()
+
+
+
+
+                    val intent = Intent(this,color_second_screen::class.java)
+                    intent.putExtra("random_color", onecolor)
+                    startActivity(intent)
+
+
+                }
+
+
+
+                /*val builder = StrictMode.VmPolicy.Builder()
                 StrictMode.setVmPolicy(builder.build())
 
                 window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-                myContext = this
+                myContext = this*/
 
-                initCamere()
+                /*initCamere()*/
 
 
             }
 
-            private fun initCamere() {
+            /*private fun initCamere() {
 
                 mCamera = Camera.open()
                 mCamera!!.setDisplayOrientation(90)
@@ -89,7 +106,7 @@ class color : AppCompatActivity() {
 
                 mCamera!!.startPreview()
 
-            }
+            }*/
 
 
         }

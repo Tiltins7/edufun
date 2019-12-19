@@ -43,7 +43,13 @@
     <string name="counting_finish_incorrect">%1$s</string>
     <string name="counting_finish_playagain">PLAY AGAIN</string>
     <string name="counting_finish_exit">EXIT</string>
-
+    <string name="color_game_color_name">color:</string>
+    <string name="color_game_random_color"> </string>
+    <string name="color_game_ok">OK</string>
+    <string name="color_game_your_answer">your answer:</string>
+    <string name="color_game_answer"> </string>
+    <string name="color_game_playagain">PLAY AGAIN</string>
+    <string name="color_game_takephoto">CHOOSE</string>
 
 
     <string name="animal_game_reload">AGAIN</string>
