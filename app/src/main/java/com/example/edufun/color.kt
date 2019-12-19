@@ -86,7 +86,7 @@ class color : AppCompatActivity() {
                 cameraPreview = findViewById(R.id.cPreview) as LinearLayout
                 mPreview = CameraPreview(myContext as color, mCamera)
                 cameraPreview!!.addView(mPreview)
-                
+
                 mCamera!!.startPreview()
 
            }
