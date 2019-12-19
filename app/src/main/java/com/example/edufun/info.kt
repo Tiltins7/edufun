@@ -20,6 +20,11 @@ class info : AppCompatActivity() {
         setContentView(R.layout.activity_info)
 
         homeBtnInf.setOnClickListener {
+
+            if (mTTS.isSpeaking){
+                mTTS.stop()
+            }
+
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }

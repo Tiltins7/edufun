@@ -51,7 +51,7 @@ class animal_start_screen : AppCompatActivity() {
 
         btnExit.setOnClickListener{
             val intent = Intent(this, animal_info::class.java)
-            button.setVisibility(View.GONE);
+
             startActivity(intent)
 
         }
@@ -60,6 +60,7 @@ class animal_start_screen : AppCompatActivity() {
 
         initCamere()
 
+        funcAgain()
         initFunc()
             // TODO need to find the way to call equalString() after QR scann
         //equalString(correctStr, incorrectStr)
@@ -142,6 +143,24 @@ class animal_start_screen : AppCompatActivity() {
             // call scanner function
             initScan()
             btn_reload.visibility = View.VISIBLE
+
+        }
+    }
+
+    private fun funcAgain(){
+        btn_reload.setOnClickListener {
+//
+            incorrectStr.visibility = View.INVISIBLE
+
+
+            val animalList= listOf<String>("CAT","DOG","BIRD","ELEPHANT","MONKEY","PIG","PENGUIN","RABBIT")
+
+            val oneAnimal = animalList.random()
+
+
+            randVal.text = oneAnimal
+
+
 
         }
     }
