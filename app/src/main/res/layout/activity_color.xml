@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".color">
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/cPreview">
+
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/homebtn"
         android:layout_width="65dp"
@@ -22,6 +32,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <Button
         android:id="@+id/btnAudioInfo"
@@ -150,15 +162,6 @@
             android:textColor="#FFEFFF"
             android:textSize="18sp"
             app:fontFamily="@font/peace_sans" />
-
-        <LinearLayout
-            android:id="@+id/cPreview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-
-        </LinearLayout>
 
 
     </FrameLayout>
